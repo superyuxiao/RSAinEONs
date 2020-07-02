@@ -18,7 +18,7 @@ class DisjointSet(dict):
     def unionset(self, item1, item2):
         self[item2] = self[item1]
 
-
+# 节点类
 class Node(object):
 
     """
@@ -45,7 +45,7 @@ class Node(object):
     def __str__(self):
         return '节点%s'%self._name+',相邻节点%s'%self._con_node
 
-
+#链路类
 class Link(object):
     """
     :param name:链路名（编号）
@@ -108,7 +108,7 @@ class Link(object):
         return '链路'+'%s'%self._name+'，两端节点%s，链路距离%d，调制等阶%d，链路频隙%s'\
         %(list_ternode, self._linkdistance, self.modformal(), self._linkslot[:])
 
-
+#业务类
 class Traffic(object):
     """
     :param name:业务名（编号）
